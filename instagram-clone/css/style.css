@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
-  font-family: sans-serif;
+  font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
 }
 
@@ -42,26 +42,102 @@ body {
   justify-content: space-around;
   flex-direction: column;
   width: 50%;
-  min-height: 34rem;
+  min-height: 42rem;
 }
 
 .group {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   flex-direction: column;
   width: 100%;
   padding: 1.3rem 0;
   border: 1px solid lightgray;
+  background-color: rgb(248, 248, 248);
 }
 
 .group > img {
   width: 175px;
   height: 51px;
+  margin: 1.2rem;
+}
+
+.input-group {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 1.2rem;
+}
+
+.input-group input {
+  width: 75%;
+  padding: 0.8rem 0.3rem;
+}
+
+.input-group input:first-child {
+  margin-bottom: 0.5rem;
+}
+
+.input-group button {
+  width: 75%;
+  border: none;
+  background-color: #0095f6;
+  color: #fff;
+  padding: 0.6rem;
+  border-radius: 5px;
+  margin-top: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.input-group input:first {
+  margin-bottom: 2rem;
 }
 
 .group:nth-child(1) {
   min-height: 19rem;
+}
+
+.option {
+  margin-top: 1.2rem;
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.option span {
+  display: block;
+  text-align: center;
+  color: rgb(139, 139, 133);
+}
+
+.option::before,
+.option::after {
+  content: "";
+  background-color: lightgray;
+  height: 1px;
+  width: 39%;
+}
+
+.facebook-login {
+  color: #385185;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  margin-top: 1.6rem;
+}
+
+.facebook-login img {
+  height: 16px;
+  width: 16px;
+  margin-right: 0.4rem;
+}
+
+.reset-password {
+  color: #385185;
+  margin: 1.3rem 0;
+  font-size: 0.9rem;
 }
 
 .profile-photo {
@@ -89,7 +165,8 @@ body {
 }
 
 .not-account {
-  color: rgb(160, 160, 160);
+  color: #000;
+  font-weight: 500;
 }
 
 .link-blue {
@@ -125,4 +202,32 @@ body {
 
 .app-download:nth-child(2) {
   background-image: url("../img/dowloadAndroid.png");
+}
+
+/* Media queries */
+@media (max-width: 1024px) {
+  .instagram-wrapper {
+    width: 90%;
+  }
+}
+
+@media (max-width: 650px) {
+  body {
+    background-color: #fff;
+  }
+  .instagram-wrapper {
+    width: 90%;
+  }
+
+  .instagram-phone {
+    display: none;
+  }
+
+  .instagram-continue {
+    width: 100%;
+  }
+
+  .group {
+    border: 1px solid transparent;
+  }
 }

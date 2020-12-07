@@ -2,6 +2,7 @@
   --redPrimary: #e50914;
   --blackPrimary: #141414;
   --textMenu: #aaa;
+  --fontBody: #fff;
 }
 
 * {
@@ -13,6 +14,7 @@
 body {
   background: var(--blackPrimary);
   font-family: "Times New Roman", Times, serif;
+  color: var(--fontBody);
 }
 
 .logo {
@@ -37,4 +39,54 @@ header nav a {
 
 header nav a:hover {
   color: #fff;
+}
+
+/* Movie star */
+.movie-star {
+  font-size: 16px;
+  height: 400px;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url("https://image.tmdb.org/t/p/original/uDsfvUyhtaQZcAkwDPrRgN3SxnX.jpg"),
+    no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.movie-star .container {
+  width: 70%;
+}
+
+.movie-title {
+  margin-top: 15%;
+  font-size: 40px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.movie-star .description {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: var(--fontBody);
+  padding: 15px 30px;
+  margin-right: 15px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.btn:hover {
+  background-color: var(--fontBody);
+  color: var(--blackPrimary);
+}
+
+.btn i {
+  margin-right: 8px;
 }
